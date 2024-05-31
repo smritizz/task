@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("submissionModal");
     const closeButton = document.querySelector(".close-button");
 
+
+
     form.addEventListener("submit", function(event) {
         event.preventDefault(); 
 
@@ -61,20 +63,18 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             body: JSON.stringify(data)
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(result => {
             if (result.success) {
                 modal.style.display = "block";
-            } else {
-                console.error('Error:', result.message);
             }
         })
         .catch(error => console.error('Error:', error));
+    });
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        modal.style.display = "block";
     });
 
     closeButton.addEventListener("click", function() {
@@ -87,5 +87,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
