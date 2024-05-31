@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jewellery Customization Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized jewellery</h1>
+        <form id="customizationForm">
+            <label for="occasion">Occasion:</label>
+            <select id="occasion" name="occasion">
+                <option value="">Select an occasion</option>
+                <option value="engagement">Engagement</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="birthday">Birthday</option>
+                <option value="daily-wear">Daily Wear</option>
+            </select>
+
+            <label>Gift or Personal Purchase:</label>
+            <div>
+                <label><input type="radio" name="purchaseType" value="gift" required> Gift</label>
+                <label><input type="radio" name="purchaseType" value="personal" required> Personal</label>
+            </div>
+
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="male" required>Male</label>
+                <label><input type="radio" name="gender" value="female" required>Female</label>
+                <label><input type="radio" name="gender" value="other" required>Other</label>
+            </div>
+
+            <label>Age Group:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="ageGroup" value="18-25" required> 18-25</label>
+                <label><input type="radio" name="ageGroup" value="26-35" required> 26-35</label>
+                <label><input type="radio" name="ageGroup" value="36-50" required> 36-50</label>
+                <label><input type="radio" name="ageGroup" value="50+" required> 50+</label>
+            </div>
+
+            <label for="religion">Religion (Optional):</label>
+            <input type="text" id="religion" name="religion">
+
+            <label for="jewelleryType">Type of jewellery:</label>
+            <select id="jewelleryType" name="jewelleryType" required>
+                <option value="">Select a type</option>
+                <option value="rings">Rings</option>
+                <option value="necklaces">Necklaces</option>
+                <option value="bracelets">Bracelets</option>
+                <option value="earrings">Earrings</option>
+            </select>
+
+            <label for="outfit">Would you like to match your jewellery with an outfit? (Optional)</label>
+            <input type="file" id="outfit" name="outfit" accept="image/*">
+            <div id="outfitPreview"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="submissionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Thank You for your responses!</p>
+            <p>We'll contact you soon.</p>
+
+        </div>
+    </div>
+
+    <!-- Place the script at the end of the body -->
+    <script src="script.js"></script>
+</body>
+</html>
