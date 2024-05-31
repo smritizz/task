@@ -1,4 +1,7 @@
-# Live Link: https://task-bcm2-6ycs12wz0-smritizzs-projects.vercel.app
+Live Link: https://task-bcm2-6ycs12wz0-smritizzs-projects.vercel.app
+
+I have used HTML,CSS and vanilla javascript as mentioned in the assignment. The form is fully responsive and the data collected by the form will be stored in the data folder in the Task folder which is automatically created when user submits the form.
+
 
 For Better Experience, run the form locally.
 # Instructions to run the form locally:
